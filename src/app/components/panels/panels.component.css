@@ -1,0 +1,74 @@
+#main-container-panels{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;  
+}
+
+/* Document Information */
+
+#documet-info{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+/* Text Area Panel */
+#panel1{  
+    flex:1; 
+    height: 85%; 
+    overflow: hidden;
+}
+
+#editor{
+    width: 100%;
+    height: 100%;
+}
+
+ace-editor{
+    width: 100%;
+    height: 90%;
+    overflow: scroll;
+}
+
+#input-sign{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-style: solid;
+    border-width: thin;
+    border-left-color: none;
+    border-color: rgb(80, 80, 80);
+    padding: 1%;
+}
+
+
+/* Output Panel */
+#panel2{
+    flex: 1;
+    height: 82%;
+    overflow: hidden
+}
+
+#preview{
+    height: 90%;
+    padding-left: 2%;
+    overflow: scroll
+}
+
+#output-sign{
+    display: flex;
+    border-style: solid;
+    border-width: thin;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: rgb(80, 80, 80);
+    
+    padding: 1%;
+    justify-content: center
+}
+
+
+
+
+
+

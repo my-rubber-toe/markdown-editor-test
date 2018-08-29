@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div id="toolbar-container">
+      <app-custom-toolbar></app-custom-toolbar>
+    </div>
+    <div id="editor-container">
+      <app-panels></app-panels>
+    </div>
+
+    <button id="actionsButton" mat-fab (click)="newDocument()" matTooltip="New Document"  matTooltipPosition="left" >
+        <mat-icon svgIcon="plus" ></mat-icon>
+      </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

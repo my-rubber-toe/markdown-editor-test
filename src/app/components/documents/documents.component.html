@@ -1,0 +1,17 @@
+<mat-nav-list>
+    <mat-list-item 
+        *ngFor="let doc of userDocs()" 
+        (click)="setCurrentDocument(doc)"
+        [ngClass]="{'selectedDoc': doc == getCurrentDocument()}">
+        <span>{{doc.name | truncate}}</span>
+        <span class="spacer"></span>
+        <!-- If number of documens is gt 1 then user can delete document, else the last document is the default document -->
+        <div *ngIf="userDocs().length > 1">
+            <button mat-icon-button color="warn" (click)="deleteDocument(doc)">
+                <mat-icon svgIcon="delete"></mat-icon>
+            </button>
+        </div>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+
+</mat-nav-list>

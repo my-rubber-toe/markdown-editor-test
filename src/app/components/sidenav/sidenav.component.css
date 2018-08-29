@@ -1,0 +1,11 @@
+#sidenav-title{
+    text-align: center;
+    padding: 5% 0 10% 0 ; 
+}
+
+#sidenav-buttons{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%
+}
+

@@ -1,0 +1,29 @@
+<br>
+<div id="document-info">
+    <mat-form-field class="example-full-width" style="width: 25%; padding-left: 2%">
+      <input id="nameInput" #inputName matInput placeholder="Document Name" [value]="getDocumentName()" maxlength="30">
+    </mat-form-field>
+    <span>
+      <mat-hint align="end">{{inputName.value.length}} / 30</mat-hint>
+    </span>
+</div>
+
+<div id="main-container-panels">
+  <div id="panel1">
+    <div id="input-sign">
+      <h5>Input</h5>
+    </div>
+    <div id="editor">
+      <ace-editor id="ace-editor" #ace id="input" style="font-size: 16px" (textChanged)="updateOutput($event)" [value]="getDocumentText()"></ace-editor>
+    </div>
+  </div>
+  <div id="panel2">
+    <div id="output-sign">
+      <h5>Output</h5>
+    </div>
+    <div id="preview" #preview>
+      <div id="output" style="font-size: 16px" [innerHtml]="convertedString ">
+      </div>
+    </div>
+  </div>
+</div>

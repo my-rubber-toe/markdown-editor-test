@@ -1,0 +1,81 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row style="justify-content: center">
+            <span ><h2>Markdown Editor</h2></span>
+    </mat-toolbar-row>
+  </mat-toolbar> 
+
+<!-- <div id="sidenav-title">
+    <h2>Markdown Editor</h2>
+</div> -->
+<br>
+<mat-progress-bar *ngIf="downloading" mode="indeterminate"></mat-progress-bar>
+<br>
+<div>
+    <mat-accordion>
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+                <mat-panel-title style="color: #E65100">
+                    Download As
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+                    <mat-list-item (click)="downloadContent('pdf')">
+                        PDF
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+
+                    <mat-list-item (click)="downloadContent('html')">
+                        HTML
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+
+                    <mat-list-item (click)="downloadContent('md')">
+                        Markdown
+                    </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title style="color: #E65100">
+                    Preview As
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+                    <mat-list-item (click)="previewContent('pdf')">
+                        PDF
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+
+                    <mat-list-item  (click)="previewContent('html')">
+                        HTML
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+
+                    <mat-list-item (click)="previewContent('md')">
+                        Markdown
+                    </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header >
+                <mat-panel-title style="color: #E65100;">
+                    Documents
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-documents></app-documents> <!-- Documents COMPONENT  -->
+        </mat-expansion-panel>
+    </mat-accordion>
+
+</div>
+
+<br>
+<br>
+
+<div id="sidenav-buttons">
+    <button mat-raised-button color="primary" style="width: 90%;" (click)="newDocument()"> New Document</button>
+</div>
+
+<div id="sidenav-buttons">
+    <button mat-raised-button [disabled]="getDocNmrs() == 1" color="warn" style="width: 90%;" (click)="deleteDocument()" >Delete Document</button>
+</div>
